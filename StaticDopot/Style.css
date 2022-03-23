@@ -66,8 +66,7 @@ h1{
 */  
 
 .hero-section{
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
 
@@ -265,6 +264,7 @@ footer{
 }
 
 .content-footer {
+    color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -285,6 +285,10 @@ footer{
     justify-content: center;
 }
 
+.footer-logo img{
+    max-height: 250px;
+}
+
 .social-icons img{
     flex: 1, 1, auto;
     max-width: 100px;
@@ -295,15 +299,11 @@ footer{
 }
 
 .social-icons h6{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    margin: 0 auto;
 }
 
 
-.contact,
-.copyright{
+.contact{
     color: white;
     display: flex;
     flex-direction: column;
@@ -314,9 +314,6 @@ footer{
 .contact h6{
     /* font-size: 1em; */
 }
-.copyright{
-    /* margin-bottom: 1em; */
-}
 
 
 /*
@@ -324,28 +321,13 @@ footer{
     RESPONSIVE
 
 */
-/*
-@media screen and (max-width: 1000px){
-    html,
-    body{
-        font-size: 1.3rem;
-    }
-}
 
 @media screen and (max-width: 840px){
-    html,
-    body{
-        font-size: 1.2rem;
-    }
-
     .card {
         grid-template-columns: 1fr;
-        padding: 1em;
     }
 
     .card{
-        height: 140px;
-        margin: 1em;
         max-width: 800px;
     }
     .image       { display: none; }
@@ -358,7 +340,6 @@ footer{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        max-height: 560px;
     }
     .title-social{display: none;}
     .social-icons { grid-area: 3 / 1 / 4 / 3;}
@@ -369,4 +350,4 @@ footer{
     .title-social, .social-icons, .footer-logo, .contact, .copyright{
         height: max-content;
     }
-}*/
+}
