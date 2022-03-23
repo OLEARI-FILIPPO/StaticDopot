@@ -164,6 +164,7 @@ h1{
 }
 
 .image img{
+    display: none;
     position: absolute;
     width: 100%;
     height: auto;
@@ -196,14 +197,11 @@ h1{
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
+
     
-.short       { grid-area: 1 / 2 / 2 / 3; }
-.description { grid-area: 2 / 2 / 3 / 3; }
-.image       { grid-area: 1 / 1 / 3 / 2; }
-    
-.second .short       { grid-area: 1 / 1 / 2 / 2; }
-.second .description { grid-area: 2 / 1 / 3 / 2; }
-.second .image       { grid-area: 1 / 2 / 3 / 3; } 
+.short       { grid-area: 1 / 1 / 2 / 3; }
+.description { grid-area: 2 / 1 / 3 / 3; }
+/* .image       { grid-area: 1 / 1 / 3 / 2; } */
 
 
 .first{
@@ -260,33 +258,33 @@ h1{
 footer{
     background: linear-gradient(60deg,  rgba(84,58,183,1) 0%, 
     rgba(0,172,193,1));
-    height: max-content;
+    color: white;
 }
 
 .content-footer {
-    color: white;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-.title-social   { grid-area: 1 / 1 / 2 / 2; }
-.social-icons   { grid-area: 2 / 1 / 3 / 2; }
-.footer-logo    { grid-area: 1 / 2 / 3 / 3; }
-.contact        { grid-area: 1 / 3 / 2 / 4; }
-.copyright      { grid-area: 2 / 3 / 3 / 4; }
-    
+    grid-row-gap: 1rem; 
+}
+
+    .social-icons   { grid-area: 2 / 1 / 3 / 2;}
+    .footer-logo    { grid-area: 1 / 1 / 2 / 2; }
+    .contact        { grid-area: 3 / 1 / 4 / 2; }
+    .copyright      { grid-area: 4 / 1 / 5 / 2; } 
 
 
 .footer-logo{
     display: flex;
     justify-content: center;
+    position: relative;
 }
-
-.footer-logo img{
-    max-height: 250px;
+.footer-logo::after{
+    content: "DOPOT.IT";
+    display: block;
+    position: absolute;
+    bottom: 0;
 }
 
 .social-icons img{
@@ -298,23 +296,27 @@ footer{
     text-align:center;
 }
 
-.social-icons h6{
-    margin: 0 auto;
+.align-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
 .contact{
-    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: end;
     align-items: center;
     gap: 1em;
 }
-.contact h6{
-    /* font-size: 1em; */
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
-
+.contact p,
+.copyright{
+    font-size: 1rem;
+}
 
 /*
 
@@ -322,32 +324,36 @@ footer{
 
 */
 
-@media screen and (max-width: 840px){
-    .card {
-        grid-template-columns: 1fr;
-    }
+@media screen and (min-width: 560px){
 
-    .card{
-        max-width: 800px;
-    }
-    .image       { display: none; }
+    .short          { grid-area: 1 / 2 / 2 / 3; }
+    .description    { grid-area: 2 / 2 / 3 / 3; }
+    .image          { grid-area: 1 / 1 / 3 / 2; }
+
+    .second .short       { grid-area: 1 / 1 / 2 / 2; }
+    .second .description { grid-area: 2 / 1 / 3 / 2; } 
+    .second .image       { grid-area: 1 / 2 / 3 / 3; } 
 
     .first, .second, .third{
         transform: translate(0);
     }
+}
 
+@media screen and (min-width: 780px){
     .content-footer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
     }
-    .title-social{display: none;}
-    .social-icons { grid-area: 3 / 1 / 4 / 3;}
-    .footer-logo { grid-area: 1 / 1 / 2 / 3; }
-    .contact { grid-area:  4 / 1 / 5 / 3; }
-    .copyright { grid-area: 5 / 1 / 6 / 3; } 
 
-    .title-social, .social-icons, .footer-logo, .contact, .copyright{
-        height: max-content;
+    .social-icons   { grid-area: 2 / 1 / 3 / 2;}
+    .footer-logo    { grid-area: 1 / 2 / 2 / 3; }
+    .contact        { grid-area: 1 / 3 / 2 / 4; }
+    .copyright      { grid-area: 2 / 3 / 3 / 4; } 
+
+    .contact{
+        justify-content: end;
     }
 }
