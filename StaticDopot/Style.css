@@ -1,4 +1,8 @@
 :root{
+    /*  Font family and colors    */
+    --ff-primary: sans-serif, arial;
+    /* --ff-primary: sans-serif, arial; */
+
     --hero-left: rgba(84,58,183,1);
     --hero-right: rgba(0,172,193,1);
 
@@ -33,12 +37,22 @@ p, span{
 body,
 html{
     padding: 0;
-    font-family: 'Open Sans';
+    font-family: var(--ff-primary);
+    font-size: 1.3125rem;
+    line-height: 1.6;
 }
 
 body{
     background: rgb(219,219,219);
     background: linear-gradient(220deg, rgba(219,219,219,1) 0%, rgba(237,237,237,1) 35%, rgba(255,255,255,1) 100%); 
+}
+
+/*  Section padding starting from the second    */
+section{
+    padding: 3rem 0;
+}
+section:first-of-type{
+    padding: 0;
 }
 
 h1{
@@ -72,6 +86,12 @@ h1{
     text-align: center;
     margin-bottom: 1.4em;
 }
+
+/* Utility class for title and subtitle*/
+.text-line{
+    max-width: 30rem;
+}
+
 .title h1 span:first-of-type{
     color: var(--title-green);
 }
@@ -81,7 +101,6 @@ h1{
 
 .subtitle{
     color: rgba(255, 255, 255, 0.85);
-    max-width: 1230px;
 }
 
 .subtitle p{
