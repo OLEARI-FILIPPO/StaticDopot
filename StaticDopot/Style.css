@@ -1,6 +1,6 @@
 :root{
     /*  Font family and colors    */
-    --ff-primary: sans-serif, arial;
+    --ff-primary: "calibri";
     /* --ff-primary: sans-serif, arial; */
 
     --hero-left: rgba(84,58,183,1);
@@ -17,6 +17,11 @@
     --second-shadow: rgba(44,113,188,0.5);
     --third: #03A8C1;
     --third-shadow: rgba(3,168,193,0.5);
+
+    --default-shadow:rgba(110, 110, 110, 0.698);
+
+    --hero-gradient: linear-gradient(60deg,  rgba(84,58,183,0.7) 50%, 
+                                             rgba(0,172,193,0.7) 90%);
 }
 
 *, *::after, *, ::before{
@@ -43,8 +48,8 @@ html{
 }
 
 body{
-    background: rgb(219,219,219);
-    background: linear-gradient(220deg, rgba(219,219,219,1) 0%, rgba(237,237,237,1) 35%, rgba(255,255,255,1) 100%); 
+    background: rgb(231, 231, 231);
+    /* background: linear-gradient(220deg, rgba(219,219,219,1) 0%, rgba(237,237,237,1) 35%, rgba(255,255,255,1) 100%);  */
 }
 
 /*  Section padding starting from the second    */
@@ -66,13 +71,13 @@ h1{
 */  
 
 .hero-section{
+    position: relative;
     min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
-
-    background: linear-gradient(60deg,  rgba(84,58,183,1) 0%, 
-                                        rgba(0,172,193,1));
-
+    background: linear-gradient(to top, rgb(231, 231, 231), rgba(238, 64, 53, 0) 80%), 
+                var(--hero-gradient);
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,25 +86,65 @@ h1{
 
 .title,
 .subtitle{
-    color: white;
     text-align: center;
     margin-bottom: 1.4em;
 }
 
-/* Utility class for title and subtitle*/
-.text-line{
-    max-width: 30rem;
+
+.title h1{
+    background: linear-gradient(45deg,var(--first),var(--second),var(--hero-right),var(--third),var(--first),var(--second) 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    
+    background-size: 400% 400%;
+
+    animation: 10s ease infinite background-animation;
+    -webkit-animation: 10s ease 0s infinite normal none running background-animation;
 }
 
+/* Utility class for title and subtitle*/
+.text-line{
+    max-width: 25rem;
+}
+/*
 .title h1 span:first-of-type{
     color: var(--title-green);
 }
 .title h1 span:last-of-type{
     color: var(--title-red);
-}
+}*/
+
+/*  ANIMAZIONE BACKGROUND TESTO */
+  @keyframes background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+
+  @-webkit-keyframes background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
 
 .subtitle{
-    color: rgba(255, 255, 255, 0.85);
+    color: rgb(0, 0, 0);
 }
 
 .subtitle p{
@@ -107,22 +152,23 @@ h1{
 }
 
 .buttons button{
-    background: var(--button);
+    background-image: linear-gradient(to right, var(--first) 0%,var(--second)  51%, var(--third)  100%);
     border: none;
     color: white;
     transition: all 0.2s ease-in-out;
-}
-
-.buttons button:first-child{
-    /* margin-right: 1.5em; */
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+    background-size: 200% auto;
 }
 
 .buttons button:hover,
 .buttons button:focus{
     cursor: pointer;
-    box-shadow: 0 0.5em 0.5em -0.4em var(--hero-right);
     transform: translateY(-0.25em);
-
+    background-position: right center;
     color: rgba(255, 255, 255, 0.75);
 }
 
@@ -134,10 +180,6 @@ h1{
 
 .services-section{
     height: max-content;
-}
-
-.services-section h4{
-    font-weight: 600;
     text-align: center;
 }
 
@@ -145,84 +187,49 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .card{
-    border: 2px solid;
+    /* border: 1px solid var(--default-shadow); */
     border-radius: 20px;
-    max-width: 860px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    margin: 1rem 0.5rem;
+    padding: 1.5rem;
+    flex: 1 1 auto;
+    background-color: rgb(245, 245, 245);
 }
+
+.image       { grid-area: 1 / 1 / 2 / 2; }
+.short       { grid-area: 2 / 1 / 3 / 2; }
+.description { grid-area: 3 / 1 / 4 / 2; } 
 
  .image{
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .image img{
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: auto;
+    /* display: none; */
     object-position: center;
-    max-width: 320px;
+    max-width: 350px;
 }
-
-.short{
-    /* font-size: 0.9em;
-    margin-top: 0.5em; */
-}
-.first  .short          { color: var(--first); }
-.second .short          { color: var(--second); /*margin-left: 1.5em;*/}  
-/* .second .description    { margin-left: 2em;}
-.first .description    { margin-right: 2em;}
-.third .description    { margin-right: 2em;} */
-.third  .short          { color: var(--third); }
-
+.short{ font-weight: bold;}
 .description{
-    /* font-size: 0.7em;
-    letter-spacing: 1.5px; */
+    color: var(--default-shadow);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
 }
 
-
-
-.card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-
-    
-.short       { grid-area: 1 / 1 / 2 / 3; }
-.description { grid-area: 2 / 1 / 3 / 3; }
-/* .image       { grid-area: 1 / 1 / 3 / 2; } */
-
-
-.first{
-    /* transform: translateX(1em); */
-    /* border: 2px solid var(--first); */
-    border: none;
-    box-shadow: var(--first-shadow) 5px 5px 10px 0px;
+.first, .third{
+    box-shadow: 0 8px 6px -6px var(--default-shadow);
 }
 
 .second{
-    /* transform: translateX(-1em); */
-    border: none;
-    /* border: 2px solid var(--second); */
-    box-shadow: var(--second-shadow) -5px 5px 10px 0px;
-}
-
-.third{
-    /* transform: translateX(1em); */
-    /* border: 2px solid var(--third); */
-    border: none;
-    box-shadow: var(--third-shadow) 5px 5px 10px 0px;
+    box-shadow: 0 8px 6px -6px var(--default-shadow);
 }
 
 /*
@@ -237,15 +244,14 @@ h1{
 
 .supporter{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+    margin: 1.5rem auto 0.5rem auto;  
 }
 .supporter img{
-    width: 200px;
+    width: 250px;
     border: 2px solid red;
     border-radius: 15px;
     height: auto;
+    box-shadow: 0 8px 6px -6px var(--default-shadow);
 }
 
 /*
@@ -269,9 +275,9 @@ footer{
     grid-row-gap: 1rem; 
 }
 
-    .social-icons   { grid-area: 1 / 1 / 2 / 2;}
-    .footer-logo    { grid-area: 1 / 2 / 2 / 3; }
-    .contact        { grid-area: 1 / 3 / 2 / 4; }
+.social-icons   { grid-area: 1 / 1 / 2 / 2;}
+.footer-logo    { grid-area: 1 / 2 / 2 / 3; }
+.contact        { grid-area: 1 / 3 / 2 / 4; }
 
 
 .footer-logo{
@@ -292,7 +298,8 @@ footer{
 }
 
 .social-icons {
-    text-align:center;
+    text-align: center;
+    padding: 4rem 0 0 0;
 }
 
 .align-social{
@@ -326,17 +333,12 @@ footer{
 */
 
 @media screen and (min-width: 560px){
-
-    .short          { grid-area: 1 / 2 / 2 / 3; }
-    .description    { grid-area: 2 / 2 / 3 / 3; }
-    .image          { grid-area: 1 / 1 / 3 / 2; }
-
-    .second .short       { grid-area: 1 / 1 / 2 / 2; }
-    .second .description { grid-area: 2 / 1 / 3 / 2; } 
-    .second .image       { grid-area: 1 / 2 / 3 / 3; } 
-
-    .first, .second, .third{
-        transform: translate(0);
+    .cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card{
+        max-width: 650px;
     }
 }
 @media screen and (max-width: 660px){
@@ -348,7 +350,7 @@ footer{
         grid-row-gap: 0rem; 
     }
     
-        .social-icons   { grid-area: 1 / 1 / 2 / 2;}
-        .footer-logo    { grid-area: 2 / 1 / 3 / 2; }
-        .contact        { grid-area: 3 / 1 / 4 / 2; }
+    .social-icons   { grid-area: 1 / 1 / 2 / 2;}
+    .footer-logo    { grid-area: 2 / 1 / 3 / 2; }
+    .contact        { grid-area: 3 / 1 / 4 / 2; }
 }
