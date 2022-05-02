@@ -1,0 +1,63 @@
+:root{
+    --primary-color: #FFE425;
+    --secondary-color: #DF1F68;
+    --tertiary-color: #FF43A0;
+
+    --hero-gradient: linear-gradient(60deg,  var(--primary-color) 0%, 
+    var(--secondary-color) 50%, var(--tertiary-color) 100%);
+}
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.hero img{
+    /* position: sticky; */
+    /* object-fit: contain; */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 97%, rgba(0,0,0,0) 100%);
+    overflow: hidden;
+}
+
+
+.hero-text{
+    position: absolute;
+    left: 0;
+    bottom: calc(0rem + 6vw);
+    margin: 8rem;
+    /* width: clamp(100px, 80%, 650px);  */
+    width: clamp(100px, 80%, 450px);        /* TODO: ADAPT USING VW */
+    font-size: calc(0.5rem + 0.6vw);
+}
+
+.hero-title{
+    letter-spacing: 1.5px;
+}
+.hero-title > p{
+    margin: 1.2rem 0;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 1.5rem;
+}
+.hero-buttons > *{
+    font-size: 1em;
+}
+
+/*MOBILE*/
+@media screen and (max-width: calc(400px + 16rem)) {
+    .hero-text{
+        margin: 0 auto;
+        left: 50%;
+        bottom: 10%;
+        transform: translate(-50%);
+        width: clamp(100px, 80%, 650px);      /*  TODO: ADAPT USING VW  */
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    /*.hero img{
+        display: none;
+    }*/
+}

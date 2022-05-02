@@ -12,7 +12,7 @@ function App() {
   return (
     <div >
       <>
-      <Navbar select={Router}/>
+      <Navbar /*select={Router}*//>
 
       <Routes>
         
@@ -24,7 +24,7 @@ function App() {
 
       </Routes>
 
-      <DefaultFooter />
+      {<DefaultFooter />}
     </>
     </div>
   );

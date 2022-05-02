@@ -1,0 +1,108 @@
+:root{
+    --primary-color: #FFE425;
+    --secondary-color: #DF1F68;
+    --tertiary-color: #FF43A0;
+
+    --hero-gradient: linear-gradient(60deg,  var(--primary-color) 0%, 
+    var(--secondary-color) 50%, var(--tertiary-color) 100%);
+}
+.navbar .logo  {
+    position: absolute;
+    left: 8rem;
+    top: 1rem;
+}
+.navbar .logo img{width: 90px;}
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.menu,
+.menu-content,
+.navbar { display: flex; }
+
+.menu{
+    align-self: flex-start;
+    width: 100%
+}
+
+.menu-content{
+    flex: 1 1 auto;
+    gap: calc(1rem + 1vw);
+    justify-content: flex-end;
+    margin: 2rem 5rem 1rem 1rem;
+}
+
+.menu-content .item{
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+.menu-content .item a{
+    color: white !important;    /* Mandatory to override te default property in index.css */
+    text-shadow: 0 0 4px black; /*  TO BE REMOVED ONCE THE BG IS INSERTED  */
+}
+.menu-content .item:hover{
+    transform: translateY(-2.5px);
+}
+
+
+@media screen and (max-width: 760px) {
+    .menu-content{
+        /* display: none; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: unset;
+        position: unset;
+        margin: 3.5rem 0 1rem 0;
+    }
+    .navbar .logo{
+        position: relative;
+        left: unset;
+        top: 0.5rem
+    }
+    .navbar .logo img{width: 60px;}
+    .navbar{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(255, 255, 255); 
+        padding-bottom: 1rem;
+    }
+    .menu{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .menu-content{
+        flex: unset;
+        display: flex;
+        gap: calc(1rem + 1vw);
+        display: none;
+        margin: 3rem 0;
+    }
+    .open{display: flex;}
+
+    .toggle-menu{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        transition: all 0.4s ease-in-out;
+    }
+    .toggle-menu:hover{ cursor: pointer;}
+    .toggle-menu .bar{
+        height: 5px;
+        width: 50px;
+        border-radius: 10px;
+        background: var(--hero-gradient);
+    }
+}
