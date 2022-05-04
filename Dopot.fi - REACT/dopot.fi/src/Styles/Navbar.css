@@ -6,6 +6,9 @@
     --hero-gradient: linear-gradient(60deg,  var(--primary-color) 0%, 
     var(--secondary-color) 50%, var(--tertiary-color) 100%);
 }
+.navbar{background-color: rgba(255, 255, 255, 0.253);}
+
+
 .navbar .logo  {
     position: absolute;
     left: 8rem;
@@ -13,11 +16,12 @@
 }
 .navbar .logo img{width: 90px;}
 .navbar{
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu,
@@ -48,6 +52,11 @@
     transform: translateY(-2.5px);
 }
 
+
+/*  Scroll */
+.fixed{
+    position: fixed;
+}
 
 @media screen and (max-width: 760px) {
     .menu-content{

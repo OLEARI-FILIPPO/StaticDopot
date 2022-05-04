@@ -1,4 +1,7 @@
-    
+footer{
+    margin: auto;
+    margin-top: 5rem;
+}
 .footer{ 
     text-align:center;
     align-content: center;
@@ -39,6 +42,8 @@
 .footer-content h3:first-child{
     margin-bottom: 1rem;
 }
+
+
 
 @media screen and (max-width: calc(400px + 16rem)) {
     .footer-content {

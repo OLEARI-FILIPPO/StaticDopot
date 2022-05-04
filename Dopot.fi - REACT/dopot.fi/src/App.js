@@ -10,23 +10,21 @@ import NotFound from './Pages/NotFound'
 
 function App() {
   return (
-    <div >
       <>
-      <Navbar /*select={Router}*//>
+        <Navbar /*select={Router}*//>
 
-      <Routes>
-        
-        <Route path='/' element={<Navigate replace to='/home' />}  />
-        <Route path='/home' exact element={<Home />} />
+        <Routes>
+          
+          <Route path='/' element={<Navigate replace to='/home' />}  />
+          <Route path='/home' exact element={<Home />} />
 
-        {/* Path non trovato */}
-        <Route path='*' element={<NotFound />} />
+          {/* Path non trovato */}
+          <Route path='*' element={<NotFound />} />
 
-      </Routes>
+        </Routes>
 
-      {<DefaultFooter />}
-    </>
-    </div>
+        {<DefaultFooter />}
+      </>
   );
 }
 

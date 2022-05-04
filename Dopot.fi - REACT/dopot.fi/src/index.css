@@ -9,6 +9,15 @@ html{
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+/*    Stick footer to bottom  */
+body{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html  {  height: 100%; }
+
 *, *::after, *, ::before{
   box-sizing: border-box;
 }
