@@ -92,7 +92,45 @@ function Home() {
             
             <section>
                 <div className='services'>
-
+                    {/* SERVICE 1 */}
+                    <div className='service'>
+                        <div className='s-title'>
+                            Meno Burocrazia grazie agli Smart Contract
+                        </div>
+                        <div className='s-subtitle'>
+                            La prima piattaforma su blockchain di equity crowdfunding che utilizza le 
+                            criptovalute per velocizzare e ampliare il mercato finanziario in Italia
+                        </div>
+                        <div className='s-image'>
+                            image
+                        </div>
+                    </div>
+                    {/* SERVICE 2 */}
+                    <div className='service inverse'>
+                        <div className='s-title'>
+                            Transazioni veloci
+                        </div>
+                        <div className='s-subtitle'>
+                            La prima piattaforma su blockchain di equity crowdfunding che utilizza le 
+                            criptovalute per velocizzare e ampliare il mercato finanziario in Italia
+                        </div>
+                        <div className='s-image'>
+                            image
+                        </div>
+                    </div>
+                    {/* SERVICE 3 */}
+                    <div className='service'>
+                        <div className='s-title'>
+                            Nessun intermediario
+                        </div>
+                        <div className='s-subtitle'>
+                            La prima piattaforma su blockchain di equity crowdfunding che utilizza le 
+                            criptovalute per velocizzare e ampliare il mercato finanziario in Italia
+                        </div>
+                        <div className='s-image'>
+                            image
+                        </div>
+                    </div>
                 </div>
             </section>
 

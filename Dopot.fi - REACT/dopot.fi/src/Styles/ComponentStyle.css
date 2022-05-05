@@ -16,7 +16,6 @@
     outline: none;
     border: 1px solid var(--btn-secondary);
     animation: background-image 0.3s ease-in-out;
-    width: 10rem;
 }
 
 .button:hover,
