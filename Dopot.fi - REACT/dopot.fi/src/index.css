@@ -15,6 +15,8 @@ body{
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background: black;
+  color: white
 }
 html  {  height: 100%; }
 
@@ -32,8 +34,16 @@ h6,
 p, span{
   margin: 0;
 }
+p{
+  line-height: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+H2{
+  font-size: 2rem;
+}
 
 a{
   text-decoration: none;
-  color: black;
+  color: white;
 }

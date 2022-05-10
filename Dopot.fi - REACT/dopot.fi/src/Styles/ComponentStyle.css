@@ -10,8 +10,7 @@
     text-transform: uppercase;
     transition: all 0.5s;
     background-size: 200% auto;
-    color: var(--btn-secondary);            
-    box-shadow: 0 0 20px #eee;
+    color: var(--btn-secondary);  
     border-radius: 2rem;
     outline: none;
     border: 1px solid var(--btn-secondary);

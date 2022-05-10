@@ -2,15 +2,17 @@ import React from 'react'
 import '../Styles/Home.css'
 import '../Styles/ComponentStyle.css'
 //Components
-
-import hero from '../Images/SPACE-DOPOT.png'
+import hero from '../Images/razzo.png'
 import Service1 from '../Images/Service.png'
+import Token from '../Images/Token.png'
+import { PieChart } from '../UIComponent/PieChart'
 
 function Home() {
+    
     return (
         <>
+            <div className='background'></div>
             <div className='hero'>
-                {/* <img src={hero}/> */}
                 <div className='hero-text'>
                     <div className='hero-title'>
                         <h1>Un sogno possibile grazie alla Blockchain</h1>
@@ -99,7 +101,7 @@ function Home() {
                     {/* SERVICE 1 */}
                     <div className='service'>
                         <div className='s-title'>
-                            <h1>Meno Burocrazia grazie agli Smart Contract</h1>
+                            <h3>Meno Burocrazia grazie agli Smart Contract</h3>
                         </div>
                         <div className='s-subtitle'>
                             <p>La prima piattaforma su blockchain di equity crowdfunding che utilizza le 
@@ -113,7 +115,7 @@ function Home() {
                     {/* SERVICE 2 */}
                     <div className='service inverse'>
                         <div className='s-title'>
-                            <h1>Transazioni veloci</h1>
+                            <h3>Transazioni veloci</h3>
                         </div>
                         <div className='s-subtitle'>
                             <p>La prima piattaforma su blockchain di equity crowdfunding che utilizza le 
@@ -127,7 +129,7 @@ function Home() {
                     {/* SERVICE 3 */}
                     <div className='service'>
                         <div className='s-title'>
-                            <h1>Nessun intermediario</h1>
+                            <h3>Nessun intermediario</h3>
                         </div>
                         <div className='s-subtitle'>
                            <p> La prima piattaforma su blockchain di equity crowdfunding che utilizza le 
@@ -141,16 +143,16 @@ function Home() {
                 </div>
             </section>
 
-            <section>
+            <section className='roadmap-section'>
+                <div className='roadmap-background'></div>
                 <div className='roadmap'>
-                    <h1>ROADMAP</h1>
                     <div className='phases'>
                         <div className='phase'>
                             <div className='p-image'>
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Mercurio</h1>
+                                <h3>Fase Mercurio</h3>
                             </div>
                             <div className='p-description'>
                                 <p>Apertura ufficiale della prima 
@@ -164,7 +166,7 @@ function Home() {
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Venere</h1>
+                                <h3>Fase Venere</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -179,7 +181,7 @@ function Home() {
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Terra</h1>
+                                <h3>Fase Terra</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -194,7 +196,7 @@ function Home() {
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Luna</h1>
+                                <h3>Fase Luna</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -208,7 +210,7 @@ function Home() {
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Marte</h1>
+                                <h3>Fase Marte</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -222,7 +224,7 @@ function Home() {
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Giove</h1>
+                                <h3>Fase Giove</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -236,7 +238,7 @@ function Home() {
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Saturno</h1>
+                                <h3>Fase Saturno</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -250,7 +252,7 @@ function Home() {
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Uranio</h1>
+                                <h3>Fase Uranio</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -265,7 +267,7 @@ function Home() {
                                 image
                             </div>
                             <div className='p-title'>
-                                <h1>Fase Plutone</h1>
+                                <h3>Fase Plutone</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -277,6 +279,42 @@ function Home() {
 
 
                     </div>
+                </div>
+            </section>
+
+            <section>
+                <div className='token'>
+                    <img src={Token}></img>
+                    <h2> IL TOKEN DOPOT </h2>
+                    <p> Dopot farà affidamento all’utilizzo di un token di governance creato su fantom per garantire la 
+                        decentralizzazione totale della piattaforma e l’interazione della community sul potere decisionale
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div className='loader-legend'>
+                    <PieChart/>
+                    <h2> DISTRIBUZIONE SUPPLY</h2>
+                </div>
+            </section>
+
+            <section>
+                <div className='vantaggi'>
+                    <h2>I VANTAGGI DELLA DAI</h2>
+                    <div className='card-dai'>
+
+                    </div>
+
+                    <div className='list-vantaggi'>
+
+                    </div>
+                </div>
+            </section>
+
+            <section >
+                <div className='faq'>
+
                 </div>
             </section>
         </>
