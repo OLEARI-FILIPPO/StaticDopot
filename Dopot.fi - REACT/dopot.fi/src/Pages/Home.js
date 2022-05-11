@@ -147,7 +147,7 @@ function Home() {
                 <div className='roadmap-background'></div>
                 <div className='roadmap'>
                     <div className='phases'>
-                        <div className='phase'>
+                        <div className='phase mercurio'>
                             <div className='p-image'>
                                 image
                             </div>
@@ -161,7 +161,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className='phase'>
+                        <div className='phase terra'>
                             <div className='p-image'>
                                 image
                             </div>

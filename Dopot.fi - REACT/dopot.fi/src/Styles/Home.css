@@ -160,6 +160,10 @@ section{
     z-index: -1;
 }
 
+.roadmap{
+    position: absolute;
+    top: 57rem;
+}
 
 .phase 
 {
@@ -173,7 +177,9 @@ section{
     border-radius: 20px;
     margin: 3rem 0;
     padding: 2rem;
+    background: white;
 } 
+
 
 .p-image{
     border-radius: 10px;
