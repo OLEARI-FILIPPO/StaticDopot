@@ -2,9 +2,11 @@ import React from 'react'
 import '../Styles/Home.css'
 import '../Styles/ComponentStyle.css'
 //Components
-import hero from '../Images/razzo.png'
 import Service1 from '../Images/Service.png'
-import Token from '../Images/Token.png'
+import Function1 from '../Images/function_logo1.png'
+import Function2 from '../Images/function_logo2.png'
+import Function3 from '../Images/function_logo3.png'
+import Token from '../Images/coin_dopot.png'
 import { PieChart } from '../UIComponent/PieChart'
 
 function Home() {
@@ -51,7 +53,7 @@ function Home() {
                     <div className='functions'>
                         <div className='function'>
                             <div className='f-image'>
-                                
+                                <img src={Function1}/>
                             </div>
                             <div className='f-title'>
                                 <h3>Entra nell'applicazione</h3>
@@ -64,7 +66,7 @@ function Home() {
                         </div>
                         <div className='function'>
                             <div className='f-image'>
-                                
+                                <img src={Function2}/>
                             </div>
                             <div className='f-title'>
                                 <h3>Connetti il wallet</h3>
@@ -77,7 +79,7 @@ function Home() {
                         </div>
                         <div className='function'>
                             <div className='f-image'>
-
+                                <img src={Function3}/>
                             </div>
                             <div className='f-title'>
                                 <h3> Inizia a investire</h3>
@@ -160,7 +162,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className='phase terra'>
                             <div className='p-image'>
                                 image
@@ -175,7 +176,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className='phase'>
                             <div className='p-image'>
                                 image
@@ -190,7 +190,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className='phase'>
                             <div className='p-image'>
                                 image
@@ -204,7 +203,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className='phase'>
                             <div className='p-image'>
                                 image
@@ -218,7 +216,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className='phase'>
                             <div className='p-image'>
                                 image
@@ -232,7 +229,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className='phase'>
                             <div className='p-image'>
                                 image
@@ -246,7 +242,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className='phase'>
                             <div className='p-image'>
                                 image
@@ -261,7 +256,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className='phase'>
                             <div className='p-image'>
                                 image
@@ -276,8 +270,6 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </section>

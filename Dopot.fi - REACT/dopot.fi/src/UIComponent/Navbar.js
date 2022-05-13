@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 import '../Styles/Navbar.css'
 
-import logo from '../Images/Logo_SfondoBiancov2.jpg'
+import logo from '../Images/Logo_SfondoBiancov2.png'
 
 
 

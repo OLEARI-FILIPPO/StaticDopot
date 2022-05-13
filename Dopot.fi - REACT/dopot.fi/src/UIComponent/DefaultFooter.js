@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../Styles/Footer.css'
-import logo from '../Images/Logo_SfondoBianco.jpg'
+import logo from '../Images/Logo_SfondoBianco.png'
 
 
 export default function DefaultFooter() {
