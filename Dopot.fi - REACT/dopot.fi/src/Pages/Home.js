@@ -150,8 +150,8 @@ function Home() {
                 <div className='roadmap'>
                     <div className='phases'>
                         <div className='phase mercurio'>
-                            <div className='p-image'>
-                                image
+                            <div className='p-number'>
+                                <h1>01</h1>
                             </div>
                             <div className='p-title'>
                                 <h3>Fase Mercurio</h3>
@@ -162,9 +162,9 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='phase terra'>
-                            <div className='p-image'>
-                                image
+                        <div className='phase venere'>
+                            <div className='p-number'>
+                                <h1>02</h1>
                             </div>
                             <div className='p-title'>
                                 <h3>Fase Venere</h3>
@@ -176,9 +176,9 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='phase'>
-                            <div className='p-image'>
-                                image
+                        <div className='phase terra'>
+                            <div className='p-number'>
+                                <h1>03</h1>
                             </div>
                             <div className='p-title'>
                                 <h3>Fase Terra</h3>
@@ -190,9 +190,9 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='phase'>
-                            <div className='p-image'>
-                                image
+                        <div className='phase luna'>
+                            <div className='p-number'>
+                                <h1>04</h1>
                             </div>
                             <div className='p-title'>
                                 <h3>Fase Luna</h3>
@@ -203,9 +203,9 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='phase'>
-                            <div className='p-image'>
-                                image
+                        <div className='phase marte'>
+                            <div className='p-number'>
+                                <h1>05</h1>
                             </div>
                             <div className='p-title'>
                                 <h3>Fase Marte</h3>
@@ -216,9 +216,9 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='phase'>
-                            <div className='p-image'>
-                                image
+                        <div className='phase giove'>
+                            <div className='p-number'>
+                                <h1>06</h1>
                             </div>
                             <div className='p-title'>
                                 <h3>Fase Giove</h3>
@@ -229,9 +229,9 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='phase'>
-                            <div className='p-image'>
-                                image
+                        <div className='phase saturno'>
+                            <div className='p-number'>
+                                <h1>07</h1>
                             </div>
                             <div className='p-title'>
                                 <h3>Fase Saturno</h3>
@@ -242,12 +242,12 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='phase'>
-                            <div className='p-image'>
-                                image
+                        <div className='phase urano'>
+                            <div className='p-number'>
+                                <h1>08</h1>
                             </div>
                             <div className='p-title'>
-                                <h3>Fase Uranio</h3>
+                                <h3>Fase Urano</h3>
                             </div>
                             <div className='p-description'>
                                 <p>
@@ -256,9 +256,23 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='phase'>
-                            <div className='p-image'>
-                                image
+                        <div className='phase nettuno'>
+                            <div className='p-number'>
+                                <h1>09</h1>
+                            </div>
+                            <div className='p-title'>
+                                <h3>Fase Nettuno</h3>
+                            </div>
+                            <div className='p-description'>
+                                <p>
+                                Apertura ufficiale della prima 
+                                sezione di Reward crowdfunding
+                                </p>
+                            </div>
+                        </div>
+                        <div className='phase plutone'>
+                            <div className='p-number'>
+                                <h1>10</h1>
                             </div>
                             <div className='p-title'>
                                 <h3>Fase Plutone</h3>
@@ -286,8 +300,8 @@ function Home() {
 
             <section>
                 <div className='loader-legend'>
-                    <PieChart/>
                     <h2> DISTRIBUZIONE SUPPLY</h2>
+                    <PieChart/>
                 </div>
             </section>
 
@@ -295,7 +309,11 @@ function Home() {
                 <div className='vantaggi'>
                     <h2>I VANTAGGI DELLA DAI</h2>
                     <div className='card-dai'>
-
+                        <h2>Cos'è DAI</h2>
+                        <p>La criptovaluta DAI (DAI) è un token ERC-20 che è stato progettato
+                            per funzionare come stablecoin o valuta stabile il cui valore è ancorato al dollaro.
+                            Tale valuta è emessa in maniera decentralizzata grazie alla collateralizzazione
+                            di garanzie che servono a garantirne in ogni momento l’emissione.</p>
                     </div>
 
                     <div className='list-vantaggi'>

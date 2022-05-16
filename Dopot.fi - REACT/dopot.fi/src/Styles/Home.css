@@ -155,41 +155,96 @@ section{
     left: 0;
     top: -2px;
 
-    background: url('../Images/pianeti_roadmap.png');
-    background-size: cover;
+    background: url('../Images/pianeti_roadmap.png') no-repeat;
+    background-size:100vw;  
+    object-fit:cover;
     z-index: -1;
 }
 
 .roadmap{
     position: absolute;
-    top: 57rem;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .phase 
 {
+    position: absolute;
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 3rem;
-    grid-row-gap: 0rem;
+    grid-row-gap: 0;
     max-width: calc(20vw + 10rem);
-    border: 3px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
-    margin: 3rem 0;
-    padding: 2rem;
+    padding: calc(2rem - 0.3vw);
     background: white;
-} 
-
-
-.p-image{
-    border-radius: 10px;
-    background: black;
-    margin: 0.5rem;
-    width: 5rem;
-    height: 5rem;
+    color: black;
+    
 }
 
-.p-image        { grid-area: 1 / 1 / 3 / 2; }
+.phase .p-number{font-size: calc(1rem + 1.1vw); align-self: center;}
+.phase .p-title{font-size: calc(0.5rem + 0.6vw);}
+.phase .p-description{
+    font-size: calc(0.4rem + 0.5vw);
+}
+
+.mercurio{
+    right: 20vw;
+    top: 30vw;
+}
+
+.venere{
+    left: 47vw;
+    top: 50vw;
+}
+
+.terra{
+    right: 31vw;
+    top: 67vw;
+}
+
+.luna{
+    right: 44vw;
+    top: 88vw;
+}
+
+.marte{
+    left: 48vw;
+    top: 106vw;
+}
+
+.giove{
+    right: 35vw;
+    top: 130vw;
+}
+
+.saturno{
+    left: 55vw;
+    top: 147vw;
+}
+
+.urano{
+    right: 33vw;
+    top: 169vw;
+}
+
+.nettuno{
+    left: 51vw;
+    top: 186vw;
+}
+
+.plutone{
+    right: 41vw;
+    top: 210vw;
+}
+
+
+.p-number{
+    font-size: 3rem;
+}
+
+.p-number        { grid-area: 1 / 1 / 3 / 2; }
 .p-title        { grid-area: 1 / 2 / 2 / 3; align-self: center;}
 .p-description  { grid-area: 2 / 2 / 3 / 3; } 
 
@@ -217,6 +272,13 @@ section{
     align-items: center;
     width: 30rem;
     height: 30rem;
+}
+
+
+/*      DAI     */
+
+.vantaggi{
+    
 }
 
 
