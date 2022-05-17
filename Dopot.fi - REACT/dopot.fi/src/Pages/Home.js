@@ -2,7 +2,9 @@ import React from 'react'
 import '../Styles/Home.css'
 import '../Styles/ComponentStyle.css'
 //Components
-import Service1 from '../Images/Service.png'
+import Service1 from '../Images/Risorsa_1.png'
+import Service2 from '../Images/Risorsa_2.png'
+import Service3 from '../Images/Risorsa_3.png'
 import Function1 from '../Images/function_logo1.png'
 import Function2 from '../Images/function_logo2.png'
 import Function3 from '../Images/function_logo3.png'
@@ -125,7 +127,7 @@ function Home() {
                             </p>
                         </div>
                         <div className='s-image'>
-                            <img src={Service1}/>
+                            <img src={Service2}/>
                         </div>
                     </div>
                     {/* SERVICE 3 */}
@@ -139,7 +141,7 @@ function Home() {
                             </p>
                         </div>
                         <div className='s-image'>
-                            <img src={Service1}/>   
+                            <img src={Service3}/>   
                         </div>
                     </div>
                 </div>
