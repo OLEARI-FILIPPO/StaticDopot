@@ -8,6 +8,7 @@ import Service3 from '../Images/Risorsa_3.png'
 import Function1 from '../Images/function_logo1.png'
 import Function2 from '../Images/function_logo2.png'
 import Function3 from '../Images/function_logo3.png'
+import vantaggi1 from '../Images/function_logo3.png'
 import Token from '../Images/coin_dopot.png'
 import { PieChart } from '../UIComponent/PieChart'
 
@@ -17,7 +18,7 @@ function Home() {
     
     return (
         <>
-            <Popup/>
+            {/* <Popup/> */}
             <div className='background'></div>
             <div className='hero'>
                 <div className='hero-text'>
@@ -322,14 +323,89 @@ function Home() {
                     </div>
 
                     <div className='list-vantaggi'>
+                        <div className='vantaggio'>
+                            <div className='v-title'>
+                                <h3>Profit</h3>
+                            </div>
+                            <div className='v-description'>
+                                <p>
+                                    L’aggiunta di vari prodotti di credito consente agli utenti di investire i propri DAI e 
+                                    guadagnare interessi annui che battono il mercato tradizionale.
+                                </p>
+                            </div>
+                            <div className='v-image'>
+                                <img src={vantaggi1}/>
+                            </div>
+                        </div>
 
+                        <div className='vantaggio'>
+                            <div className='v-title'>
+                                <h3>Multi Blockchain</h3>
+                            </div>
+                            <div className='v-description'>
+                                <p>
+                                    Può essere trasferito fra tutte le principali blockchain ed è supportato da 
+                                    oltre 200 exchange
+                                </p>
+                            </div>
+                            <div className='v-image'>
+                                <img src={vantaggi1}/>
+                            </div>
+                        </div>
+
+                        <div className='vantaggio'>
+                            <div className='v-title'>
+                                <h3>Valore</h3>
+                            </div>
+                            <div className='v-description'>
+                                <p>
+                                    DAI sta dimostrando il suo valore diventando parte di oltre 400 app e       
+                                    servizi decentralizzati.
+                                </p>
+                            </div>
+                            <div className='v-image'>
+                                <img src={vantaggi1}/>
+                            </div>
+                        </div>
+
+                        <div className='vantaggio'>
+                            <div className='v-title'>
+                                <h3>Stablecoin</h3>
+                            </div>
+                            <div className='v-description'>
+                                <p>
+                                    gli smart contracts di makerDAO permettono a chiunque di fare transazioni 
+                                    dal valore stabile alla velocità della blockchain
+                                </p>
+                            </div>
+                            <div className='v-image'>
+                                <img src={vantaggi1}/>
+                            </div>
+                        </div>
+
+                        <div className='vantaggio'>
+                            <div className='v-title'>
+                                <h3>Holding </h3>
+                            </div>
+                            <div className='v-description'>
+                                <p>
+                                    Gli utenti possono tenere DAI nei loro portafogli, coprendo le loro scommesse 
+                                    contro la volatilità delle risorse digitali accumulate, oppure possono 
+                                    scambiarlo sul mercato.
+                                </p>
+                            </div>
+                            <div className='v-image'>
+                                <img src={vantaggi1}/>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </section>
 
             <section >
                 <div className='faq'>
-
+                    faq
                 </div>
             </section>
         </>
