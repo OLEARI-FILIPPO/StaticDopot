@@ -11,10 +11,13 @@ import Function3 from '../Images/function_logo3.png'
 import Token from '../Images/coin_dopot.png'
 import { PieChart } from '../UIComponent/PieChart'
 
+import Popup from '../UIComponent/Popup'
+
 function Home() {
     
     return (
         <>
+            <Popup/>
             <div className='background'></div>
             <div className='hero'>
                 <div className='hero-text'>
