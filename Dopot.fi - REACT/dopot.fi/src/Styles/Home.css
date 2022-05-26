@@ -44,11 +44,17 @@ section{
 .hero-text{
     position: absolute;
     left: 0;
-    bottom: calc(0rem + 6vw);
+    top: calc(10rem + 10vw);
     margin: 8rem;
     /* width: clamp(100px, 80%, 650px);  */
     width: clamp(100px, 80%, 450px);        /* TODO: ADAPT USING VW */
     font-size: calc(0.5rem + 0.6vw);
+}
+
+@media (max-width: 760px) {
+    .hero-text{
+        top: calc(18rem + 5vw);
+    }
 }
 
 .hero-title{

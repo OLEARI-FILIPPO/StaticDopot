@@ -6,7 +6,6 @@ import DefaultFooter from './UIComponent/DefaultFooter';
 
 //Pages
 import Home from './Pages/Home'
-import NotFound from './Pages/NotFound'
 
 function App() {
   return (
@@ -17,9 +16,6 @@ function App() {
           
           <Route path='/' element={<Navigate replace to='/home' />}  />
           <Route path='/home' exact element={<Home />} />
-
-          {/* Path non trovato */}
-          <Route path='*' element={<NotFound />} />
 
         </Routes>
 
