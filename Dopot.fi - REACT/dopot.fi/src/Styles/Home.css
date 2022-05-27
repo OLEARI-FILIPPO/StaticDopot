@@ -105,8 +105,9 @@ section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-rows: repeat(2, 1fr); */
-    grid-column-gap: 0px;
+    column-gap: 0px;
     grid-row-gap: 0.5rem; 
+    place-items: center;
 }
 
 .f-image{
@@ -120,32 +121,46 @@ section{
 .f-title        { grid-area: 1 / 2 / 2 / 3; text-align: left; align-self: center;}
 .f-description  { grid-area: 2 / 2 / 3 / 3; text-align: left; font-size: 0.8rem;} 
 
+
+@media (max-width: 760px){
+    .function{
+        grid-template-columns: 1fr;
+        /* grid-template-rows: repeat(3, 1fr); */
+        grid-row-gap: 1.5rem; 
+    }
+
+    .f-image        { grid-area: 1 / 1 / 2 / 2; }
+    .f-title        { grid-area: 2 / 1 / 3 / 2; }
+    .f-description  { grid-area: 3 / 1 / 4 / 2; } 
+}
+
 section{
     min-height: 85vh;
 }
 
 
 .services{
-    margin: 10rem 0;
+    margin-bottom: 7rem;
 }
 .service {
     display: grid;
     /*grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 3rem;
+    column-gap: 3rem;
     grid-row-gap: 0rem;*/
     margin: 0.5rem var(--distance) 1rem var(--distance);  
     font-size: 1.2rem;
+    
 }
 .service.inverse{
     text-align: right;
 }
 
-.inverse .s-title   { grid-area: 1 / 2 / 2 / 3; justify-self: right; }
-.inverse .s-subtitle{ grid-area: 2 / 2 / 3 / 3; justify-self: right;}
+.inverse .s-title   { grid-area: 1 / 2 / 2 / 3; }
+.inverse .s-subtitle{ grid-area: 2 / 2 / 3 / 3; }
 .inverse .s-image   { grid-area: 1 / 1 / 3 / 2; justify-self: left;}
     
-.s-title    { grid-area: 1 / 1 / 2 / 2; max-width: calc(9vw + 10rem);  align-self: end;}
+.s-title    { grid-area: 1 / 1 / 2 / 2; max-width: calc(9vw + 10rem); align-self: end;}
 .s-subtitle { grid-area: 2 / 1 / 3 / 2; font-size: 0.9rem; max-width: calc(15vw + 15rem); margin-top: 1rem;}
 .s-image    { grid-area: 1 / 2 / 3 / 3; max-width: 60%; justify-self: right;}
 
@@ -158,18 +173,24 @@ section{
     .service {
         grid-template-columns: 1fr;
         /* grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px; */
+        column-gap: 0px;*/
+        grid-row-gap: 1rem; 
+        place-content: center;
+        place-items: center;
+        margin: 10rem 0;
     }
         
-    .s-image    { grid-area: 1 / 1 / 2 / 2; }
-    .s-title    { grid-area: 2 / 1 / 3 / 2; }
+    .s-image    { grid-area: 1 / 1 / 2 / 2; justify-self: unset;}
+    .s-title    { grid-area: 2 / 1 / 3 / 2; max-width: calc(20vw + 10rem);}
     .s-subtitle { grid-area: 3 / 1 / 4 / 2; }
 
-    .inverse .s-image    { grid-area: 1 / 1 / 2 / 2; }
+    .inverse .s-image    { grid-area: 1 / 1 / 2 / 2; justify-self: unset;}
     .inverse .s-title    { grid-area: 2 / 1 / 3 / 2; }
     .inverse .s-subtitle { grid-area: 3 / 1 / 4 / 2; }
         
+    .service.inverse{
+        text-align: unset;
+    }
 }
 
 /*      PHASES      */
@@ -198,7 +219,7 @@ section{
 {
     position: absolute;
     display: grid;
-    grid-column-gap: 3rem;
+    column-gap: 3rem;
     grid-row-gap: 0;
     max-width: calc(20vw + 10rem);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -330,7 +351,7 @@ section{
 .vantaggio 
 {
     display: grid;
-    grid-column-gap: 3rem;
+    column-gap: 3rem;
     grid-row-gap: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
@@ -342,13 +363,27 @@ section{
 .vantaggio .v-image{align-self: center;}
 .vantaggio .v-title{font-size: calc(0.5rem + 0.6vw);}
 .vantaggio .v-description{
-    font-size: calc(0.4rem + 0.5vw);
+    font-size: calc(0.5rem + 0.5vw);
 }
 
 .v-image        { grid-area: 1 / 1 / 3 / 2; }
 .v-title        { grid-area: 1 / 2 / 2 / 3; align-self: center;}
 .v-description  { grid-area: 2 / 2 / 3 / 3; } 
 
+@media (max-width: 760px){
+    
+    .vantaggio{
+        grid-template-columns: 1fr;
+        padding: unset; 
+        row-gap: 1rem;
+        column-gap: unset;
+        margin: 3rem 0;
+    }
+
+    .v-image        { grid-area: 1 / 1 / 2 / 2; }
+    .v-title        { grid-area: 2 / 1 / 3 / 2; }
+    .v-description  { grid-area: 3 / 1 / 4 / 2; } 
+}
 
 
 /*MOBILE*/
