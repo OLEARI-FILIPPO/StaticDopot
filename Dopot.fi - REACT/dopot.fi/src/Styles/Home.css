@@ -85,6 +85,15 @@ section{
     margin-right: 10rem;
 }
 
+@media (max-width: 760px){
+    .testo-descrizione{
+        margin-right: unset;
+    }
+    .descrizione-dopot{
+        justify-content: center;
+    }
+}
+
 /*      Functinalities      */
 .functionalities{         
     position: relative;
@@ -127,6 +136,9 @@ section{
         grid-template-columns: 1fr;
         /* grid-template-rows: repeat(3, 1fr); */
         grid-row-gap: 1.5rem; 
+    }
+    .functions{
+        margin: 0 3rem;
     }
 
     .f-image        { grid-area: 1 / 1 / 2 / 2; }
@@ -194,7 +206,7 @@ section{
 }
 
 /*      PHASES      */
-.roadmap-section{position: relative; min-height: 510vh;}
+.roadmap-section{position: relative;  min-height: 510vh; }
 .roadmap-background{
     width: 100%;
     height: 100% ;
@@ -333,7 +345,7 @@ section{
 .list-vantaggi{
     display: flex;
     flex-direction: column;
-    max-width: 45%;
+    max-width: 55%;
 }
 
 .card-dai{
@@ -343,9 +355,10 @@ section{
     color: black;
     padding: 3rem;
     border-radius: 20px;
-    font-size: calc(0.5rem + 0.5vw);
+    font-size: calc(0.5rem + 0.7vw);
+   
 }
-
+.card-dai p{ line-height: 1.5rem;}
 .card-dai h2{text-align: center; font-size: calc(1rem + 1vw);}
 
 .vantaggio 
@@ -371,13 +384,19 @@ section{
 .v-description  { grid-area: 2 / 2 / 3 / 3; } 
 
 @media (max-width: 760px){
-    
+    .card-dai{
+        width: unset;
+        width: 1fr;
+    }
     .vantaggio{
         grid-template-columns: 1fr;
         padding: unset; 
         row-gap: 1rem;
         column-gap: unset;
         margin: 3rem 0;
+    }
+    .list-vantaggi{
+        max-width: calc(50vw);
     }
 
     .v-image        { grid-area: 1 / 1 / 2 / 2; }
