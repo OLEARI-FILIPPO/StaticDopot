@@ -147,7 +147,9 @@ section{
 }
 
 section{
-    min-height: 85vh;
+    position: relative;
+    min-height: 50rem;
+    margin-bottom: 10rem;
 }
 
 
@@ -206,16 +208,15 @@ section{
 }
 
 /*      PHASES      */
-.roadmap-section{position: relative;  min-height: 510vh; }
+.roadmap-section{position: relative; }
 .roadmap-background{
-    width: 100%;
-    height: 100% ;
-    position: absolute;
+    max-width: 100%;
+    height: auto ;
+    position: relative;
     left: 0;
-    top: -2px;
+    top: 0px;
 
-    background: url('../Images/pianeti_roadmap.png') no-repeat;
-    background-size:100vw;  
+    background-repeat: no-repeat;
     object-fit:cover;
     z-index: -1;
 }
@@ -370,6 +371,7 @@ section{
     border-radius: 20px;
     padding: calc(2rem - 0.3vw);
     color: white;           /*      TODO: TO PUT BLACK ONCE BG CHANGED      */
+    justify-content: start;
     
 }
 

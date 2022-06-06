@@ -9,6 +9,7 @@ import Function1 from '../Images/function_logo1.png'
 import Function2 from '../Images/function_logo2.png'
 import Function3 from '../Images/function_logo3.png'
 import vantaggi1 from '../Images/function_logo3.png'
+import roadmap from '../Images/pianeti_roadmap.png'
 import Token from '../Images/coin_dopot.png'
 import { PieChart } from '../UIComponent/PieChart'
 
@@ -152,7 +153,8 @@ function Home() {
             </section>
 
             <section className='roadmap-section'>
-                <div className='roadmap-background'></div>
+                {/* <div className='roadmap-background'></div> */}
+                <img src={roadmap} className="roadmap-background"/>
                 <div className='roadmap'>
                     <div className='phases'>
                         <div className='phase mercurio'>
