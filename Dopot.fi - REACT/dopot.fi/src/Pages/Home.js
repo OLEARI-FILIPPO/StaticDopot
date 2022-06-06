@@ -10,6 +10,7 @@ import Function2 from '../Images/function_logo2.png'
 import Function3 from '../Images/function_logo3.png'
 import vantaggi1 from '../Images/function_logo3.png'
 import roadmap from '../Images/pianeti_roadmap.png'
+import smartphone from '../Images/smartphone.png'
 import Token from '../Images/coin_dopot.png'
 import { PieChart } from '../UIComponent/PieChart'
 
@@ -57,48 +58,50 @@ function Home() {
                 <div className='functionalities'>
                     <h2>Investi nei progetti in cui credi!</h2>
                     <p>Inizia subito a investire seguendo questi step.</p>
-                    <div className='functions'>
-                        <div className='function'>
-                            <div className='f-image'>
-                                <img src={Function1}/>
+                    <div className='container-function'>
+                        <div className='functions'>
+                            <div className='function'>
+                                <div className='f-image'>
+                                    <img src={Function1}/>
+                                </div>
+                                <div className='f-title'>
+                                    <h3>Entra nell'applicazione</h3>
+                                </div>
+                                <div className='f-description'>
+                                    <p>Inserisci le tue informazioni, collega 
+                                        il tuo metamask e aspetta la verifica.  
+                                    </p>
+                                </div>
                             </div>
-                            <div className='f-title'>
-                                <h3>Entra nell'applicazione</h3>
+                            <div className='function'>
+                                <div className='f-image'>
+                                    <img src={Function2}/>
+                                </div>
+                                <div className='f-title'>
+                                    <h3>Connetti il wallet</h3>
+                                </div>
+                                <div className='f-description'>
+                                    <p>Per garantire la massima sicurezza 
+                                        il tuo account sarà verificato dai nostri server.
+                                    </p>
+                                </div>
                             </div>
-                            <div className='f-description'>
-                                <p>Inserisci le tue informazioni, collega 
-                                    il tuo metamask e aspetta la verifica.  
-                                </p>
+                            <div className='function'>
+                                <div className='f-image'>
+                                    <img src={Function3}/>
+                                </div>
+                                <div className='f-title'>
+                                    <h3> Inizia a investire</h3>
+                                </div>
+                                <div className='f-description'>
+                                    <p>Ora potrai cercare e analizzare tutti i progetti 
+                                        su Dopot, che la ricerca abbia inizio!
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div className='function'>
-                            <div className='f-image'>
-                                <img src={Function2}/>
-                            </div>
-                            <div className='f-title'>
-                                <h3>Connetti il wallet</h3>
-                            </div>
-                            <div className='f-description'>
-                                <p>Per garantire la massima sicurezza 
-                                    il tuo account sarà verificato dai nostri server.
-                                </p>
-                            </div>
-                        </div>
-                        <div className='function'>
-                            <div className='f-image'>
-                                <img src={Function3}/>
-                            </div>
-                            <div className='f-title'>
-                                <h3> Inizia a investire</h3>
-                            </div>
-                            <div className='f-description'>
-                                <p>Ora potrai cercare e analizzare tutti i progetti 
-                                    su Dopot, che la ricerca abbia inizio!
-                                </p>
-                            </div>
-                        </div>
+                        <img className='f-right-image' src={smartphone}/>
                     </div>
-                    
                 </div>
                 <div className='f-button'>
                     <input className='button' type='button' value='ENTER THE APP'/>

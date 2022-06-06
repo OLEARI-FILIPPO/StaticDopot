@@ -33,7 +33,7 @@ export default function Navbar() {
           </div>
           <div className="menu">
 
-            <div className="toggle-menu"
+            <div className={`toggle-menu ${openNavbar ? 'active' : ''}`}
                 onClick={() => setOpenNavbar(!openNavbar)}>
               <div className="bar left"></div>
               <div className="bar middle"></div>
