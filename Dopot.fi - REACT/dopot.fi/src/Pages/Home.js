@@ -11,8 +11,9 @@ import Function3 from '../Images/function_logo3.png'
 import vantaggi1 from '../Images/function_logo3.png'
 import Token from '../Images/coin_dopot.png'
 import { PieChart } from '../UIComponent/PieChart'
-
+import cosedopot from '../Images/Cosedopot.png'
 import Popup from '../UIComponent/Popup'
+import razzo from '../Images/Functions.png'
 
 function Home() {
     
@@ -37,6 +38,9 @@ function Home() {
 
             <section>
                 <div className='descrizione-dopot'>
+                    <div className='d-image'>
+                        <img src={cosedopot}/>
+                    </div>
                     <div className='testo-descrizione'>
                         <h2>Cos'è Dopot?</h2>
                         <p>
@@ -56,6 +60,9 @@ function Home() {
                 <div className='functionalities'>
                     <h2>Investi nei progetti in cui credi!</h2>
                     <p>Inizia subito a investire seguendo questi step.</p>
+                    <div className='image-functions'>
+                        <img src={razzo} />
+                    </div>
                     <div className='functions'>
                         <div className='function'>
                             <div className='f-image'>

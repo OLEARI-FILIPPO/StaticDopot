@@ -16,7 +16,8 @@
 }
 
 .hero{
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 section{
@@ -28,16 +29,16 @@ section{
 
 .background{
     width: 100%;
-    height: 200vh;
-    min-height: fit-content;
+    height: 100%;
+    /* min-height: fit-content; */
     position: absolute;
     left: 0;
     top: -2px;
 
-    background: url('../Images/razzo.png');
-    aspect-ratio: 16/9; 
-    object-fit:cover;
-    background-size: cover;
+    background: url('../Images/hero.png') no-repeat;
+     aspect-ratio: 16/9; 
+    background-size: contain; 
+    background-position: top right;
 }
 
 
@@ -54,6 +55,12 @@ section{
 @media (max-width: 760px) {
     .hero-text{
         top: calc(18rem + 5vw);
+    }
+    .background{
+        top: 78px;
+    }
+    .hero{
+        height: 110vw;
     }
 }
 
@@ -74,16 +81,35 @@ section{
 
 /*      Descrizione         */
 
-.descrizione-dopot{         
-    position: relative;
+.descrizione-dopot{     
+    display: grid;
+    box-sizing: border-box;
     width: 100%;
-    display: flex;
-    justify-content: right;
+    /* font-size: calc(0.2rem + 0.9vw); */
 }
 .testo-descrizione{
     max-width: calc(5vw + 20rem);
-    margin-right: 10rem;
+    justify-self: center;
 }
+
+.d-image{
+    width: 100%;
+}
+.d-image img{
+    width: 80%;
+    max-width: 700px;
+}
+
+@media (min-width: 760px){
+    .descrizione-dopot{
+        display: flex;
+    }
+    .testo-descrizione{
+        align-self: center;
+        margin-right: 4vw;
+    }
+}
+
 
 /*      Functinalities      */
 .functionalities{         
@@ -132,10 +158,12 @@ section{
     .f-image        { grid-area: 1 / 1 / 2 / 2; }
     .f-title        { grid-area: 2 / 1 / 3 / 2; }
     .f-description  { grid-area: 3 / 1 / 4 / 2; } 
+
+    
 }
 
 section{
-    min-height: 85vh;
+    margin-bottom: 10rem;
 }
 
 
@@ -180,9 +208,9 @@ section{
         margin: 10rem 0;
     }
         
-    .s-image    { grid-area: 1 / 1 / 2 / 2; justify-self: unset;}
+    .s-image    { grid-area: 1 / 1 / 2 / 2; max-width: calc(20vw + 10rem); justify-self: unset;}
     .s-title    { grid-area: 2 / 1 / 3 / 2; max-width: calc(20vw + 10rem);}
-    .s-subtitle { grid-area: 3 / 1 / 4 / 2; }
+    .s-subtitle { grid-area: 3 / 1 / 4 / 2; max-width: calc(20vw + 10rem);}
 
     .inverse .s-image    { grid-area: 1 / 1 / 2 / 2; justify-self: unset;}
     .inverse .s-title    { grid-area: 2 / 1 / 3 / 2; }
@@ -200,9 +228,9 @@ section{
     height: 100% ;
     position: absolute;
     left: 0;
-    top: -2px;
+    top: 0;
 
-    background: url('../Images/pianeti_roadmap.png') no-repeat;
+    background: url('../Images/Pianeti/Background-roadmap.png') no-repeat;
     background-size:100vw;  
     object-fit:cover;
     z-index: -1;
