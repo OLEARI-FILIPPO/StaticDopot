@@ -92,24 +92,14 @@ section{
     justify-self: center;
 }
 
-.d-image{
-    width: 100%;
-}
-.d-image img{
-    width: 80%;
-    max-width: 700px;
-}
-
-@media (min-width: 760px){
-    .descrizione-dopot{
-        display: flex;
-    }
+@media (max-width: 760px){
     .testo-descrizione{
-        align-self: center;
-        margin-right: 4vw;
+        margin-right: unset;
+    }
+    .descrizione-dopot{
+        justify-content: center;
     }
 }
-
 
 /*      Functinalities      */
 .functionalities{         
@@ -119,12 +109,16 @@ section{
     justify-content: left;
     flex-direction: column;
     text-align: center;
+    border: 2px solid red;
 }
 .functionalities p{margin-bottom: 3rem;}
 .functions{
     max-width: calc(5vw + 26rem);
     margin: 3rem 0 3rem var(--distance);
-    /* background-color: red; */
+    /* border: 2px solid green; */
+}
+.container-function{
+    display: flex;
 }
 
 .function{
@@ -148,11 +142,23 @@ section{
 .f-description  { grid-area: 2 / 2 / 3 / 3; text-align: left; font-size: 0.8rem;} 
 
 
+.f-right-image  { 
+    max-width: calc(25vw + 5rem);
+    width: auto;
+    object-fit: contain;
+    margin-left: 10vw;
+    /* border: 2px solid red;  */
+}
+
+
 @media (max-width: 760px){
     .function{
         grid-template-columns: 1fr;
         /* grid-template-rows: repeat(3, 1fr); */
         grid-row-gap: 1.5rem; 
+    }
+    .functions{
+        margin: 0 3rem;
     }
 
     .f-image        { grid-area: 1 / 1 / 2 / 2; }
@@ -161,8 +167,13 @@ section{
 
     
 }
+@media (max-width: 1024px){
+    .f-right-image{display: none;}
+}
 
 section{
+    position: relative;
+    min-height: 50rem;
     margin-bottom: 10rem;
 }
 
@@ -222,16 +233,15 @@ section{
 }
 
 /*      PHASES      */
-.roadmap-section{position: relative; min-height: 510vh;}
+.roadmap-section{position: relative; }
 .roadmap-background{
-    width: 100%;
-    height: 100% ;
-    position: absolute;
+    max-width: 100%;
+    height: auto ;
+    position: relative;
     left: 0;
-    top: 0;
+    top: 0px;
 
-    background: url('../Images/Pianeti/Background-roadmap.png') no-repeat;
-    background-size:100vw;  
+    background-repeat: no-repeat;
     object-fit:cover;
     z-index: -1;
 }
@@ -361,7 +371,7 @@ section{
 .list-vantaggi{
     display: flex;
     flex-direction: column;
-    max-width: 45%;
+    max-width: 55%;
 }
 
 .card-dai{
@@ -371,9 +381,10 @@ section{
     color: black;
     padding: 3rem;
     border-radius: 20px;
-    font-size: calc(0.5rem + 0.5vw);
+    font-size: calc(0.5rem + 0.7vw);
+   
 }
-
+.card-dai p{ line-height: 1.5rem;}
 .card-dai h2{text-align: center; font-size: calc(1rem + 1vw);}
 
 .vantaggio 
@@ -385,6 +396,7 @@ section{
     border-radius: 20px;
     padding: calc(2rem - 0.3vw);
     color: white;           /*      TODO: TO PUT BLACK ONCE BG CHANGED      */
+    justify-content: start;
     
 }
 
@@ -399,13 +411,19 @@ section{
 .v-description  { grid-area: 2 / 2 / 3 / 3; } 
 
 @media (max-width: 760px){
-    
+    .card-dai{
+        width: unset;
+        width: 1fr;
+    }
     .vantaggio{
         grid-template-columns: 1fr;
         padding: unset; 
         row-gap: 1rem;
         column-gap: unset;
         margin: 3rem 0;
+    }
+    .list-vantaggi{
+        max-width: calc(50vw);
     }
 
     .v-image        { grid-area: 1 / 1 / 2 / 2; }
