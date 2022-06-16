@@ -9,7 +9,7 @@ import Function1 from '../Images/function_logo1.png'
 import Function2 from '../Images/function_logo2.png'
 import Function3 from '../Images/function_logo3.png'
 import vantaggi1 from '../Images/function_logo3.png'
-import roadmap from '../Images/pianeti_roadmap.png'
+import roadmap from '../Images/Pianeti/Background-roadmap.png'
 import smartphone from '../Images/smartphone.png'
 import Token from '../Images/coin_dopot.png'
 import { PieChart } from '../UIComponent/PieChart'
@@ -21,7 +21,7 @@ function Home() {
     
     return (
         <>
-            {/* <Popup/> */}
+            <Popup/> 
             <div className='background'></div>
             <div className='hero'>
                 <div className='hero-text'>

@@ -109,7 +109,7 @@ section{
     justify-content: left;
     flex-direction: column;
     text-align: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .functionalities p{margin-bottom: 3rem;}
 .functions{
